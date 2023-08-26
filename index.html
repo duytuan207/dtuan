@@ -1,711 +1,488 @@
 <!DOCTYPE html>
-<html class='v2' dir='ltr' lang='vi' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b'
-  xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
+<html lang="en">
 
 <head>
-  <title>Nguyễn Duy Tuấn - Thông tin cá nhân</title>
-  <meta content='width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0'
-    name='viewport' />
-  <link
-    href='https://1.bp.blogspot.com/-hgQuQLjKWiM/YKytpXcsa6I/AAAAAAAAFiU/j3Ixpn1632M_SuCVcgvFY01Vxg5gV2EdwCLcBGAsYHQ/s16000/favicon-1000x1000.png'
-    rel='shortcut icon' type='image/x-icon' />
-  <meta content='https://i.imgur.com/A6u4AM6.jpg' property='og:image' />
-  <meta content='https://bulu.lon99999999.repl.co/' property='og:url' />
-  <meta content='website' property='og:type' />
-  <meta content='Nguyễn Duy Tuấn' property='og:title' />
-  <meta content='Xây dựng và phát triển bởi Duy Tuấn !' property='og:description' />
-  <link href='https://cdn.leanhduc.pro.vn/font-awesome/pro-5.15.3/css/all.css' rel='stylesheet' />
-  <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css' rel='stylesheet' />
-  <link href='https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.3.4/sweetalert2.css' rel='stylesheet' />
-  <!-- Bắt đầu css-->
-  <style id='page-skin-1' type='text/css'>
-    <!--
-    /* Chèn CSS vào đây */
-    /*------------------------------------------------*/
-    /* Name: Template giới thiệu bản thân version 8.1 */
-    /* Admin: Nguyễn Hải Đăng                         */
-    /* Phone: 0396049649                              */
-    /*------------------------------------------------*/
-    @import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
-    @import url("https://fonts.googleapis.com/css?family=Dancing+Script|Lobster|Pattaya|Srisakdi&display=swap");
 
-    html,
-    body {
-      cursor: url("https://cdn.leanhduc.pro.vn/theme/theme-thong-tin-lien-he-version-2-0/images/mouse-f1.png"), auto
-    }
-
-    a:hover {
-      cursor: url("https://cdn.leanhduc.pro.vn/theme/theme-thong-tin-lien-he-version-2-0/images/mouse-f2.png"), auto
-    }
-	  
-body{margin:0;height:100%;} canvas{ position:absolute;top:0;left:0; z-index:100; background-image: linear-gradient(bottom, rgb(105,173,212) 0%, rgb(23,82,145) 84%); background-image: -o-linear-gradient(bottom, rgb(105,173,212) 0%, rgb(23,82,145) 84%); background-image: -moz-linear-gradient(bottom, rgb(105,173,212) 0%, rgb(23,82,145) 84%); background-image: -webkit-linear-gradient(bottom, rgb(105,173,212) 0%, rgb(23,82,145) 84%); background-image: -ms-linear-gradient(bottom, rgb(105,173,212) 0%, rgb(23,82,145) 84%); background-image: -webkit-gradient( linear, left bottom, left top, color-stop(0, rgb(105,173,212)), color-stop(0.84, rgb(23,82,145)) ); }
-
-
-
-    .loader {
-      background: #4568dc;
-      background: -webkit-linear-gradient(to right, #b06ab3, #4568dc);
-      background: linear-gradient(to right, #b06ab3, #4568dc);
-      opacity: 0.6;
-      bottom: 0;
-      left: 0;
-      overflow: hidden;
-      position: fixed;
-      right: 0;
-      top: 0;
-      z-index: 99999
-    }
-
-    .loader-inner {
-      bottom: 0;
-      height: 60px;
-      left: 0;
-      margin: auto;
-      position: absolute;
-      right: 0;
-      top: 0;
-      width: 100px
-    }
-
-    .loader-line-wrap {
-      animation: spin 2000ms cubic-bezier(0.175, 0.885, 0.32, 1.275) infinite;
-      box-sizing: border-box;
-      height: 50px;
-      left: 0;
-      overflow: hidden;
-      position: absolute;
-      top: 0;
-      transform-origin: 50% 100%;
-      width: 100px
-    }
-
-    .loader-line {
-      border: 4px solid transparent;
-      border-radius: 100%;
-      box-sizing: border-box;
-      height: 100px;
-      left: 0;
-      margin: 0 auto;
-      position: absolute;
-      right: 0;
-      top: 0;
-      width: 100px
-    }
-
-    .loader-line-wrap:nth-child(1) {
-      animation-delay: -50ms
-    }
-
-    .loader-line-wrap:nth-child(2) {
-      animation-delay: -100ms
-    }
-
-    .loader-line-wrap:nth-child(3) {
-      animation-delay: -150ms
-    }
-
-    .loader-line-wrap:nth-child(4) {
-      animation-delay: -200ms
-    }
-
-    .loader-line-wrap:nth-child(5) {
-      animation-delay: -250ms
-    }
-
-    .loader-line-wrap:nth-child(1) .loader-line {
-      border-color: hsl(0, 80%, 60%);
-      height: 90px;
-      width: 90px;
-      top: 7px
-    }
-
-    .loader-line-wrap:nth-child(2) .loader-line {
-      border-color: hsl(60, 80%, 60%);
-      height: 76px;
-      width: 76px;
-      top: 14px
-    }
-
-    .loader-line-wrap:nth-child(3) .loader-line {
-      border-color: hsl(120, 80%, 60%);
-      height: 62px;
-      width: 62px;
-      top: 21px
-    }
-
-    .loader-line-wrap:nth-child(4) .loader-line {
-      border-color: hsl(180, 80%, 60%);
-      height: 48px;
-      width: 48px;
-      top: 28px
-    }
-
-    .loader-line-wrap:nth-child(5) .loader-line {
-      border-color: hsl(240, 80%, 60%);
-      height: 34px;
-      width: 34px;
-      top: 35px
-    }
-
-    @keyframes spin {
-
-      0%,
-      15% {
-        transform: rotate(0)
-      }
-
-      100% {
-        transform: rotate(360deg)
-      }
-    }
-
-    * {
-      font-family: "Roboto";
-      padding: 0;
-      margin: 0
-    }
-
-    .border {
-      position: relative;
-      width: 50%;
-      height: 2px;
-      background-color: rgb(138, 138, 138)
-    }
-
-    #boxs {
-      margin-top: 3px
-    }
-
-    #bg {
-      position: fixed;
-      min-height: 100vh;
-      min-width: 100%;
-      background-image: url("https://i.ibb.co/N96pYCk/xva213.jpg");
-      background-size: cover;
-      background-position: center;
-      margin: 0;
-      padding: 0;
-      top: 0;
-      left: 0
-    }
-
-    #window {
-      position: absolute;
-      min-height: 100%;
-      min-width: 100%;
-      background-color: #000000;
-      padding: 0;
-      top: 0;
-      left: 0
-    }
-
-    #main {
-      z-index: 2;
-      position: relative;
-      width: 450px;
-      padding-bottom: 5px;
-      background-color: #ffffffa4;
-      border-radius: 25px;
-      margin-top: 5px;
-      -webkit-box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.74);
-      box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.74)
-    }
-
-    #cover {
-      position: relative;
-      height: 100%;
-      width: 100%;
-      background-image: url("https://i.ibb.co/Wk1Hp31/xva213.jpg");
-      background-position: center;
-      background-size: cover;
-      border-top-left-radius: 25px;
-      border-top-right-radius: 25px;
-      padding-top: 30px;
-      padding-bottom: 30px
-    }
-
-    #bg-cover {
-      position: absolute;
-      height: 100%;
-      width: 100%;
-      background-image: url("https://i.ibb.co/Wk1Hp31/xva213.jpg");
-      background-position: center;
-      background-size: cover;
-      border-top-left-radius: 25px;
-      border-top-right-radius: 25px;
-      filter: opacity(0.6)
-    }
-
-    #avatar {
-      position: relative;
-      background-position: center;
-      background-size: cover;
-      border-radius: 100%;
-      border: 5px solid #1877f2;
-      -webkit-box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.74);
-      box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.74)
-    }
-
-    #avatar img {
-      height: 200px;
-      width: 200px;
-      border-radius: 50%;
-      object-fit: cover;
-      position: relative;
-      border: 2px solid #fff
-    }
-
-    .center {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      margin-top: 0
-    }
-
-    #name {
-      text-align: center;
-      font-weight: bold;
-      font-size: 30px;
-      margin-top: 10px;
-      margin-bottom: 0;
-      font-family: "Lobster"
-    }
-
-    #name i {
-      color: #1877f2;
-      font-size: 25px
-    }
-
-    #bio {
-      text-align: center;
-      margin-top: 10px;
-      margin-bottom: 10px;
-      font-family: "Roboto";
-      font-size: 16px
-    }
-
-    #contact-text {
-      display: inline-block;
-      padding: 2px 15px;
-      border-radius: 15px;
-      margin-top: 10px;
-      margin: 10px auto;
-      text-align: center;
-      font-weight: lighter;
-      font-size: 20px;
-      color: #ffffff;
-      background: rgb(45, 136, 255);
-      background: rgb(45, 136, 255);
-      background: -moz-linear-gradient(127deg, rgba(45, 136, 255, 1) 0%, rgba(131, 186, 255, 1) 100%);
-      background: -webkit-linear-gradient(127deg, rgba(45, 136, 255, 1) 0%, rgba(131, 186, 255, 1) 100%);
-      background: linear-gradient(127deg, rgba(45, 136, 255, 1) 0%, rgba(131, 186, 255, 1) 100%);
-      font-family: "Lobster";
-      transition: all 250ms;
-      cursor: default
-    }
-
-    #contact-text:hover {
-      transform: scale(1.2);
-      padding: 2px 55px
-    }
-
-    .box {
-      height: 50px;
-      width: 75%;
-      margin: 5px auto;
-      border-radius: 20px;
-      background: rgb(42, 100, 173);
-      background: -moz-linear-gradient(127deg, rgba(42, 100, 173, 1) 0%, rgba(45, 136, 255, 1) 100%);
-      background: -webkit-linear-gradient(127deg, rgba(42, 100, 173, 1) 0%, rgba(45, 136, 255, 1) 100%);
-      background: linear-gradient(127deg, rgba(42, 100, 173, 1) 0%, rgba(45, 136, 255, 1) 100%);
-      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#2a64ad", endColorstr="#2d88ff", GradientType=1);
-      -webkit-box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.74);
-      box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.74);
-      z-index: 1;
-      transition: all 250ms
-    }
-
-    .box:hover {
-      padding-right: 20px
-    }
-
-    .icon {
-      display: inline;
-      position: relative;
-      height: 50px;
-      width: 50px
-    }
-
-    .icon i {
-      font-size: 30px;
-      margin: 10px 20px;
-      color: #ffffff;
-      transition: transform 250ms;
-      z-index: 2
-    }
-
-    .icon i:hover {
-      transform: rotate(360deg)
-    }
-
-    .detail {
-      position: relative;
-      display: block;
-      margin: 0 auto;
-      font-size: 20px;
-      color: #ffffff;
-      text-align: center;
-      margin-top: 10px;
-      transition: all 500ms;
-      font-family: "Roboto"
-    }
-
-    .col-10 {
-      position: relative;
-      max-height: 100%
-    }
-
-    .col-10:hover .detail {
-      filter: opacity(0);
-      z-index: -5
-    }
-
-    .col-10:hover .linked {
-      filter: opacity(1);
-      z-index: 5
-    }
-
-    .col-10:active .detail {
-      filter: opacity(0);
-      z-index: -5
-    }
-
-    .col-10:active .linked {
-      filter: opacity(1);
-      z-index: 5
-    }
-
-    .fas {
-      transition: all 250ms
-    }
-
-    .col-10:hover .fas {
-      transform: rotate(360deg)
-    }
-
-    .linked {
-      position: relative;
-      margin: 0 auto;
-      font-size: 20px;
-      color: #ffffff;
-      text-align: center;
-      margin-top: 10px;
-      transition: all 500ms;
-      top: -40px;
-      z-index: -2;
-      filter: opacity(0);
-      transition: all 1000ms;
-      font-family: "Roboto"
-    }
-
-    .div-logo {
-      position: relative;
-      height: 30px;
-      width: 30px;
-      background-position: center;
-      background-size: cover;
-      margin: 10px 20px;
-      z-index: 5;
-      transition: all 250ms
-    }
-
-    .div-logo:hover {
-      transform: rotate(360deg)
-    }
-
-    @media only screen and (max-width:540px) {
-      #main {
-        width: 100vw;
-        margin-top: 0vw;
-        margin-bottom: 0;
-        border-radius: 0
-      }
-
-      #bg-cover {
-        border-radius: 0
-      }
-
-      #window {
-        min-height: 100%;
-        min-width: 100%
-      }
-
-      .linked {
-        font-size: 19px
-      }
-    }
-
-    .facebook {
-      background: #3a5795;
-      color: #1c3977;
-      background: linear-gradient(to bottom, #3a5795 0%, #2b4886 100%);
-      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #3a5795), color-stop(100%, #2b4886));
-      background: -webkit-linear-gradient(top, #3a5795 0%, #2b4886 100%);
-      background: -moz-linear-gradient(top, #3a5795 0%, #2b4886 100%);
-      background: -o-linear-gradient(top, #3a5795 0%, #2b4886 100%);
-      background: -ms-linear-gradient(top, #3a5795 0%, #2b4886 100%);
-      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#3A5795', endColorstr='#2B4886', GradientType=0);
-      border: 1px solid #1c3977;
-      text-shadow: 0 1px 0 #4966a4;
-      -webkit-text-shadow: 0 1px 0 #4966a4;
-      -moz-text-shadow: 0 1px 0 #4966a4;
-      box-shadow: inset 0 1px 0 #4966a4;
-      -webkit-box-shadow: inset 0 1px 0 #4966a4;
-      -moz-box-shadow: inset 0 1px 0 #4966a4
-    }
-
-    .messenger {
-      background: #fc466b;
-      background: -webkit-linear-gradient(to right, #3f5efb, #fc466b);
-      background: linear-gradient(to right, #3f5efb, #fc466b)
-    }
-
-    .tiktok {
-      background: #010101;
-      background: -webkit-linear-gradient(to right, #010101, #6c0016);
-      background: linear-gradient(to right, #010101, #6c0016)
-    }
-
-    .zalo {
-      background: #0064f7;
-      background: linear-gradient(127deg, #0064f7 0%, #2a7fff 100%)
-    }
-
-    .zalo-icon {
-      background-image: url("https://cdn.leanhduc.pro.vn/theme/theme-thong-tin-lien-he-version-2-0/images/zalo.png")
-    }
-
-    .phone {
-      background: #1f1c2c;
-      background: -webkit-linear-gradient(to right, #1f1c2c, #928dab);
-      background: linear-gradient(to right, #1f1c2c, #928dab)
-    }
-
-    .momo {
-      background: #a80069;
-      background: linear-gradient(127deg, #a80069 0%, #d73193 100%)
-    }
-
-    .momo-icon {
-      background-image: url("https://cdn.leanhduc.pro.vn/theme/theme-thong-tin-lien-he-version-2-0/images/momo.png")
-    }
-
-    .vietcombank {
-      background: #006c46;
-      background: linear-gradient(127deg, #006c46 0%, #77bc41 100%)
-    }
-
-    .vietcombank-icon {
-      background-image: url("https://cdn.leanhduc.pro.vn/theme/theme-thong-tin-lien-he-version-2-0/images/vietcombank.png")
-    }
-
-    .mbbank {
-      background: #1f00cf;
-      background: linear-gradient(127deg, #1f00cf 0%, #006db5 100%)
-    }
-
-    .mbbank-icon {
-      background-image: url("https://cdn.leanhduc.pro.vn/theme/theme-thong-tin-lien-he-version-2-0/images/mbbank.png")
-    }
-
-    .badge {
-      font-weight: bold;
-      color: #ffffff;
-      background-color: #2d88ff;
-      padding: 0.5px 3px;
-      border-radius: 3px;
-      font-size: 10px
-    }
-
-    a {
-      text-decoration: none !important;
-      color: rgb(42, 100, 173) !important
-    }
-    -->
-  </style>
+  <link rel="shortcut icon" type="image/png" href="/img/avt-sd.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <title>Nguyễn Duy Tuấn</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel="stylesheet" href="style/index.css">
+  <meta name="generator" content="Ngô Trung Kiên (Tkien)">
+  <meta property="og:title" content="Nhấn vô = bay acc">
+  <meta property="og:description" content="Social media link, Bank, Etc....">
+  <meta property="og:image" content="np://user.desktop.nicepage.com/Site_80258861/images/Starynight.jpg">
+  <link rel='stylesheet' href='https://cdn.jsdelivr.net/jquery.magnific-popup/1.0.0/magnific-popup.css'>
 </head>
-<!-- Bắt đầu phần hiển thị -->
 
 <body>
-  <!-- loading -->
-  <div class='loader'>
-    <div class='loader-inner'>
-      <div class='loader-line-wrap'>
-        <div class='loader-line'></div>
-      </div>
-      <div class='loader-line-wrap'>
-        <div class='loader-line'></div>
-      </div>
-      <div class='loader-line-wrap'>
-        <div class='loader-line'></div>
-      </div>
-      <div class='loader-line-wrap'>
-        <div class='loader-line'></div>
-      </div>
-      <div class='loader-line-wrap'>
-        <div class='loader-line'></div>
-      </div>
+  <div class="card" data-state="#about">
+    <div class="card-header">
+      <div class="card-cover" style="background-image: url('https://i.ibb.co/r3GqSFp/xva213.jpg')"></div>
+      <img class="card-avatar" src="https://i.ibb.co/r3GqSFp/xva213.jpg" alt="avatar" />
+      <h1 class="card-fullname">Nguyễn Duy Tuấn</h1>
+      <h2 class="card-jobtitle">Or called dtuan</h2>
     </div>
-  </div>
-  <!-- main -->
-  <div class='center' id='window'>
-    <div id='main'>
-      <!-- avatar -->
-      <div class='center' id='cover'>
-        <div id='bg-cover'></div>
-        <div id='avatar'>
-          <img alt='avt' src='https://i.ibb.co/r3GqSFp/xva213.jpg' />
+    <div class="card-main">
+      <div class="card-section is-active" id="about">
+        <div class="card-content">
+          <div class="card-subtitle">GIỚI THIỆU</div>
+          <p class="card-desc">From Dong Van, Ha Nam🌸</p>
+          
         </div>
-      </div>
-      <div id='content'>
-        <!-- info -->
-        <p id='name'>
-          Nguyễn Duy Tuấn <i class='fad fa-badge-check'></i>
-        </p>
-        <div class='center'>
-          <span class='badge'>
-            <i class='fas fa-code'></i> Bán đồ chơi xe - Thầy bùa Hà Nam
-          </span>
-        </div>
-        <p id="bio"> 🌐 Đồng Văn, Hà Nam Province </p>
-        <div class='center'>
-          <div class='border'></div>
-          <p id='contact-text'>Contact for work</p>
-        </div>
-        <!-- contact -->
-        <div class='center boxs' id='boxs'>
-          <!-- facebook -->
-          <div class='box facebook'>
-            <div class='row'>
-              <div class='col-2'>
-                <div class='icon'><i class='fab fa-facebook'></i></div>
-              </div>
-              <div class='col-10' onclick='openlink("https://www.facebook.com/100004989570567")'>
-                <p class='detail'>Facebook</p>
-                <p class='linked'>Nguyễn Duy Tuấn</p>
-              </div>
-            </div>
-          </div>
-          <!-- tiktok -->
-          <div class='box tiktok'>
-            <div class='row'>
-              <div class='col-2'>
-                <div class='icon'>
-                  <i class='fab fa-tiktok'></i>
-                </div>
-              </div>
-              <div class='col-10' onclick='openlink("https://www.tiktok.com/@ndt.frv")'>
-                <p class='detail'>TikTok</p>
-                <p class='linked'>xe mẹ mua đua mẹ chém</p>
-              </div>
-		    
-<style> 	#snowflakeContainer{position:absolute;left:0px;top:0px;} 	.snowflake{padding-left:15px;font-size:14px;line-height:24px;position:fixed;color:#ebebeb;user-select:none;z-index:1000;-moz-user-select:none;-ms-user-select:none;-khtml-user-select:none;-webkit-user-select:none;-webkit-touch-callout:none;} 	.snowflake:hover {cursor:default} </style> <div id='snowflakeContainer'> <p class='snowflake'>❄</p> </div> <script style='text/javascript'> 	//<![CDATA[ 	var requestAnimationFrame=window.requestAnimationFrame||window.mozRequestAnimationFrame||window.webkitRequestAnimationFrame||window.msRequestAnimationFrame;var transforms=["transform","msTransform","webkitTransform","mozTransform","oTransform"];var transformProperty=getSupportedPropertyName(transforms);var snowflakes=[];var browserWidth;var browserHeight;var numberOfSnowflakes=50;var resetPosition=false;function setup(){window.addEventListener("DOMContentLoaded",generateSnowflakes,false);window.addEventListener("resize",setResetFlag,false)}setup();function getSupportedPropertyName(b){for(var a=0;a<b.length;a++){if(typeof document.body.style[b[a]]!="undefined"){return b[a]}}return null}function Snowflake(b,a,d,e,c){this.element=b;this.radius=a;this.speed=d;this.xPos=e;this.yPos=c;this.counter=0;this.sign=Math.random()<0.5?1:-1;this.element.style.opacity=0.5+Math.random();this.element.style.fontSize=4+Math.random()*30+"px"}Snowflake.prototype.update=function(){this.counter+=this.speed/5000;this.xPos+=this.sign*this.speed*Math.cos(this.counter)/40;this.yPos+=Math.sin(this.counter)/40+this.speed/30;setTranslate3DTransform(this.element,Math.round(this.xPos),Math.round(this.yPos));if(this.yPos>browserHeight){this.yPos=-50}};function setTranslate3DTransform(a,c,b){var d="translate3d("+c+"px, "+b+"px, 0)";a.style[transformProperty]=d}function generateSnowflakes(){var b=document.querySelector(".snowflake");var h=b.parentNode;browserWidth=document.documentElement.clientWidth;browserHeight=document.documentElement.clientHeight;for(var d=0;d<numberOfSnowflakes;d++){var j=b.cloneNode(true);h.appendChild(j);var e=getPosition(50,browserWidth);var a=getPosition(50,browserHeight);var c=5+Math.random()*40;var g=4+Math.random()*10;var f=new Snowflake(j,g,c,e,a);snowflakes.push(f)}h.removeChild(b);moveSnowflakes()}function moveSnowflakes(){for(var b=0;b<snowflakes.length;b++){var a=snowflakes[b];a.update()}if(resetPosition){browserWidth=document.documentElement.clientWidth;browserHeight=document.documentElement.clientHeight;for(var b=0;b<snowflakes.length;b++){var a=snowflakes[b];a.xPos=getPosition(50,browserWidth);a.yPos=getPosition(50,browserHeight)}resetPosition=false}requestAnimationFrame(moveSnowflakes)}function getPosition(b,a){return Math.round(-1*b+Math.random()*(a+2*b))}function setResetFlag(a){resetPosition=true}; 	//]]> </script>
-            </div>
-          </div>
-          <!-- messenger -->
-          <div class='box messenger'>
-            <div class='row'>
-              <div class='col-2'>
-                <div class='icon'>
-                  <i class='fab fa-facebook-messenger'></i>
-                </div>
-              </div>
-              <div class='col-10' onclick='openlink("https://www.m.me/100004989570567/")'>
-                <p class='detail'>Messenger</p>
-                <p class='linked'>Nguyễn Duy Tuấn</p>
-              </div>
-            </div>
-          </div>
-          <!-- zalo -->
-          <div class='box zalo'>
-            <div class='row'>
-              <div class='col-2'>
-                <div class='icon'>
-                  <div class='div-logo zalo-icon'></div>
-                </div>
-              </div>
-              <div class='col-10' onclick='openlink("https://www.zalo.me/0972260366/");'>
-                <p class='detail'>Zalo</p>
-                <p class='linked'>Nguyễn Duy Tuấn</p>
-              </div>
-            </div>
-          </div>
-          <!-- phone -->
-          <div class='box phone'>
-            <div class='row'>
-              <div class='col-2'>
-                <div class='icon'>
-                  <i class='fas fa-phone'></i>
-                </div>
-              </div>
-              <div class='col-10' onclick='openlink("tel:+0354689013");'>
-                <p class='detail'>Phone</p>
-                <p class='linked'>0354689013</p>
-              </div>
-            </div>
-          </div>
-          <!-- momo -->
-          <div class='box momo'>
-            <div class='row'>
-              <div class='col-2'>
-                <div class='icon'>
-                  <div class='div-logo momo-icon'></div>
-                </div>
-              </div>
-              <div class='col-10' onclick='openlink("https://i.ibb.co/Mc12yg1/xva213.jpg");'>
-                <p class='detail'>Momo</p>
-                <p class='linked'>0972260366</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <p id='bio'>Copyright &#169; <a href='https://www.facebook.com/profile.php?id=100004989570567&mibextid=ZbWKwL' rel='noopener noreferrer'
-            target='_blank'>Nguyễn Duy Tuấn</a></p>
-      </div>
-    </div>
-    <div id='bg'></div>
-  </div>
-  <script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
-  <script src='https://cdn.jsdelivr.net/npm/sweetalert2@11'></script>
-  <script type='text/javascript'>
-    //<![CDATA[
-    // loading
-    $(".loader").delay(1000).fadeOut("fast");
-    // open link
-    function openlink(url) {
-      window.open(url, "_blank").focus();
-    }
-    // click copy
-    function copytext(str) {
-      const el = document.createElement("textarea");
-      el.value = str;
-      document.body.appendChild(el);
-      el.select();
-      document.execCommand("copy");
-      Swal.fire("Thông báo", "Copy thành công!", "success");
-    }
-			//]]>
-  </script>
-  <div class='no-items section' id='code.pro.vn'></div>
-  <!--<head>
-<meta name='google-adsense-platform-account' content='ca-host-pub-1556223355139109'/>
-<meta name='google-adsense-platform-domain' content='blogspot.com'/>
 
-</head>-->
-  <!--<body>
-</body>-->
+        <div class="card-social">
+          <a href="https://www.facebook.com/profile.php?id=100004989570567&mibextid=b06tZ0"0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M15.997 3.985h2.191V.169C17.81.117 16.51 0 14.996 0c-3.159 0-5.323 1.987-5.323 5.639V9H6.187v4.266h3.486V24h4.274V13.267h3.345l.531-4.266h-3.877V6.062c.001-1.233.333-2.077 2.051-2.077z" />
+            </svg>
+          </a>
+          <a href="https://github.com/duytuan207">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path
+                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+            </svg>
+          </a>
+          <a href="https://instagram.com/nduytuan2210?utm_source=qr&igshid=MzNlNGNkZWQ4Mg==">
+            <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+              <path d="M301 256c0 24.852-20.148 45-45 45s-45-20.148-45-45 20.148-45 45-45 45 20.148 45 45zm0 0" />
+              <path
+                d="M332 120H180c-33.086 0-60 26.914-60 60v152c0 33.086 26.914 60 60 60h152c33.086 0 60-26.914 60-60V180c0-33.086-26.914-60-60-60zm-76 211c-41.355 0-75-33.645-75-75s33.645-75 75-75 75 33.645 75 75-33.645 75-75 75zm86-146c-8.285 0-15-6.715-15-15s6.715-15 15-15 15 6.715 15 15-6.715 15-15 15zm0 0" />
+              <path
+                d="M377 0H135C60.562 0 0 60.563 0 135v242c0 74.438 60.563 135 135 135h242c74.438 0 135-60.563 135-135V135C512 60.562 451.437 0 377 0zm45 332c0 49.625-40.375 90-90 90H180c-49.625 0-90-40.375-90-90V180c0-49.625 40.375-90 90-90h152c49.625 0 90 40.375 90 90zm0 0" />
+
+            </svg>
+          </a>
+          <a href=" https://t.me/">
+            <svg viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M46.137,6.552c-0.75-0.636-1.928-0.727-3.146-0.238l-0.002,0C41.708,6.828,6.728,21.832,5.304,22.445	c-0.259,0.09-2.521,0.934-2.288,2.814c0.208,1.695,2.026,2.397,2.248,2.478l8.893,3.045c0.59,1.964,2.765,9.21,3.246,10.758	c0.3,0.965,0.789,2.233,1.646,2.494c0.752,0.29,1.5,0.025,1.984-0.355l5.437-5.043l8.777,6.845l0.209,0.125	c0.596,0.264,1.167,0.396,1.712,0.396c0.421,0,0.825-0.079,1.211-0.237c1.315-0.54,1.841-1.793,1.896-1.935l6.556-34.077	C47.231,7.933,46.675,7.007,46.137,6.552z M22,32l-3,8l-3-10l23-17L22,32z">
+              </path>
+            </svg>
+          
+
+          </svg>
+          </a>
+        </div>
+      </div>
+      <div class="card-section" id="contact">
+        <div class="card-content">
+          <div class="card-subtitle">LIÊN HỆ</div>
+          <div class="card-contact-wrapper">
+            <div class="card-contact">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
+                <circle cx="12" cy="10" r="3" />
+              </svg>
+            Hà Nam, Viet Nam
+            </div>
+            <a href="tel:+0354689013" class="card-contact">
+              <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path
+                  d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" />
+              </svg>
+              039733071
+            </a>
+            <a href="mailto:hiearth92@gmail.com" class="card-contact">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                <path d="M22 6l-10 7L2 6" />
+              </svg>
+              hiearth92@gmail.com
+            </a>
+            <button onclick="location.href='https://m.me/100004989570567';" class="contact-me">MESSENGER</button>
+          </div>
+        </div>
+      </div>
+      <div class="card-section" id="web">
+        <div class="card-content">
+          <div class="card-subtitle">HỆ THỐNG:</div>
+          <div style="width: 50%; float:left" class="card-contact-wrapper">
+
+            <style type="text/css">
+              .lienket {
+                background-color: white;
+                color: black;
+                border: 2px solid #4e68cf;
+                border-radius: 5px;
+                padding: 10px 20px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 10px;
+                font-family: "Lucida Sans Unicode";
+              }
+
+              .lienket:hover {
+                background-color: #4e68cf;
+                color: white;
+              }
+
+              .lienket:active {
+                background-color: pink;
+                border-color: pink;
+              }
+            </style>
+
+            <body>
+              <a href="" class="lienket">LOVE</a>
+              <a href="#" class="lienket">THUÊ BOT</a>
+          </div>
+          <div style="width: 50%; float:right" class="card-contact-wrapper">
+            <a href="#" class="lienket">DỊCH VỤ FACEBOOK</a>
+          </div>
+          <a href="" class="lienket">API</a>
+
+
 </body>
-<!-- Kết thúc phần hiển thị -->
+</div>
+</div>
+</div>
+<div class="card-section" id="dichvu">
+  <div class="card-content">
+    <div class="card-subtitle">DỊCH VỤ:</div>
+    <div style="width: 50%; float:left" class="card-contact-wrapper">
+      <div href="#dvfb" style="text-decoration: underline" class="open-popup-link card-contact">
+        <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <i class="fa fa-facebook"></i>
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0"
+          stroke-linecap="round" stroke-linejoin="round">
+        </svg>
+        FACEBOOK
+      </div>
+      <div href="#tiktok" style="text-decoration: underline" class="open-popup-link card-contact">
+        <i class="fa fa-gratipay"></i>
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+        </svg>
+        TIKTOK
+      </div>
+    </div>
+    <div style="width: 50%; float:right" class="card-contact-wrapper">
+      <div href="#ins" style="text-decoration: underline" class="open-popup-link card-contact">
+        <i class="fa fa-instagram"></i>
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+        </svg>
+        INSTAGRAM
+      </div>
+      <div href="#botmes" style="text-decoration: underline" class="open-popup-link card-contact">
+        <i class="fa fa-slideshare"></i>
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+        </svg>
+        BOT MESSERGER
+      </div>
+    </div>
+  </div>
+</div>
+<div class="card-section" id="tienich">
+  <div class="card-content">
+    <div class="card-subtitle">TIỆN ÍCH:</div>
+    <div style="width: 50%; float:left" class="card-contact-wrapper">
+      <a href="https://kemdinodev.com/thumbnail-youtube.html" class="lienket" width="100" height="50">Thumbnail
+        Youtube</a>
+      <p></p>
+      <a href="" class="lienket" width="100" height="50">2FA</a>
+      <a href="" class="lienket" width="100" height="50">Check IP</a>
+      <p></p>
+      <a href="" class="lienket" width="100" height="50">Upload</a>
+      <a href="" class="lienket" width="100" height="50">TẠO URL</a>
 
-  </html>
+    </div>
+  </div>
+</div>
+<div class="card-section" id="api">
+  <div class="card-content">
+    <div class="card-subtitle">API:</div>
+    <div style="width: 50%; float:left" class="card-contact-wrapper">
+      <div href="#anh" style="text-decoration: underline" class="open-popup-link card-contact">
+        <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <i class="fa fa-image"></i>
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">>
+        </svg>
+        ẢNH
+      </div>
+      <div href="#meme" style="text-decoration: underline" class="open-popup-link card-contact">
+        <i class="fa fa-image"></i>
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+        </svg>
+        MEME
+      </div>
+    </div>
+    <div style="width: 50%; float:right" class="card-contact-wrapper">
+      <div href="#video" style="text-decoration: underline" class="open-popup-link card-contact">
+        <i class="fa fa-video-camera"></i>
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+        </svg>
+        VIDEO
+      </div>
+      <div href="#text" style="text-decoration: underline" class="open-popup-link card-contact">
+        <i class="fa fa-file-text-o"></i>
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+        </svg>
+        TEXT
+      </div>
+    </div>
+    <div style="width: 50%; float:right" class="card-contact-wrapper">
+      <div href="#game" style="text-decoration: underline" class="open-popup-link card-contact">
+        <i class="fa fa-gamepad"></i>
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+        </svg>
+        GAME
+      </div>
+    </div>
+    <div style="width: 50%; float:right" class="card-contact-wrapper">
+      <div href="#bank" style="text-decoration: underline" class="open-popup-link card-contact">
+        <i class="fa fa-bank"></i>
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+        </svg>
+        API BANK
+      </div>
+    </div>
+  </div>
+</div>
+<div class="card-section" id="payment">
+  <div class="card-content">
+    <div class="card-subtitle">BANK:</div>
+    <div style="width: 50%; float:left" class="card-contact-wrapper">
+
+      <div href="#mb" style="text-decoration: underline" class="open-popup-link card-contact">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <path d="M7 21h-4v-11h4v11zm7-11h-4v11h4v-11zm7 0h-4v11h4v-11zm2 12h-22v2h22v-2zm-23-13h24l-12-9-12 9z" />
+        </svg>
+        MB Bank
+      </div>
+      <div href="#momo" style="text-decoration: underline" class="open-popup-link card-contact">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <path d="M7 21h-4v-11h4v11zm7-11h-4v11h4v-11zm7 0h-4v11h4v-11zm2 12h-22v2h22v-2zm-23-13h24l-12-9-12 9z" />
+        </svg>
+        MOMO
+      </div>
+    </div>
+    <div style="width: 50%; float:right" class="card-contact-wrapper">
+      <div href="#vcb" style="text-decoration: underline" class="open-popup-link card-contact">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <path d="M7 21h-4v-11h4v11zm7-11h-4v11h4v-11zm7 0h-4v11h4v-11zm2 12h-22v2h22v-2zm-23-13h24l-12-9-12 9z" />
+        </svg>
+        Vietcombank
+      </div>
+      <div href="#vtb" style="text-decoration: underline" class="open-popup-link card-contact">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <path d="M7 21h-4v-11h4v11zm7-11h-4v11h4v-11zm7 0h-4v11h4v-11zm2 12h-22v2h22v-2zm-23-13h24l-12-9-12 9z" />
+        </svg>
+        Vietinbank
+      </div>
+      <div class="card-contact">
+        <script type='text/javascript' src='ko-fi.com/khongco'></script>
+        <script type='text/javascript'>
+          kofiwidget2.init('Xin cái bánh mì', '#29abe0', 'V7V581EVG');
+          kofiwidget2.draw();
+        </script>
+      </div>
+      <div class="card-contact"></div>
+    </div>
+    <!--POPUP-->
+
+    <div id="mb" class="white-popup mfp-hide">
+      <h2>MB BANK</h2>
+      <p>Số Tài khoản: 0972260366</p>
+    </div>
+    <div id="momo" class="white-popup mfp-hide">
+      <h2>MoMo</h2>
+      <p>Số Tài khoản: 0972260366</p>
+      <p></p>
+      <a href="https://me.momo.vn/0972260366" class="lienket" width="100" height="50">CHUYỂN NGAY</a>
+      <h3 style="color:red;">Vui Lòng Dùng Quét QR Để Thanh Toán!</h3>
+
+      <div id="vcb" class="white-popup mfp-hide">
+
+        <head>
+          <style type="text/css">
+            .lienket1 {
+              background-color: white;
+              color: black;
+              border: 2px solid #73AD21;
+              border-radius: 5px;
+              padding: 10px 20px;
+              text-align: center;
+              text-decoration: none;
+              display: inline-block;
+              font-size: 16px;
+              font-family: "Lucida Sans Unicode";
+            }
+
+            .lienket1:hover {
+              background-color: #73AD21;
+              color: white;
+            }
+
+            .lienket1:active {
+              background-color: green;
+              border-color: green;
+            }
+          </style>
+        </head>
+        <p></p>
+
+        <h3 style="color:red;">Vui Lòng Dùng Quét QR Để Thanh Toán!</h3>
+      </div>
+      <div id="dvfb" class="white-popup mfp-hide">
+        <h2>BẢNG GIÁ FACEBOOK</h2>
+        <style type="text/css">
+          table,
+          th,
+          td {
+            border: 2px solid black;
+          }
+
+          table {
+            border-collapse: collapse;
+          }
+        </style>
+        </head>
+
+        <body>
+          <table>
+            <tr>
+              <th> LOẠI </th>
+              <th> GIÁ </th>
+              <th> Ghi Chú </th>
+            </tr>
+            <tr>
+              <td> Like | Cảm Xúc </td>
+              <td> ... (VNĐ) </td>
+              <td> 1000 (like/cảm xúc)</td>
+            </tr>
+            <tr>
+              <td> Follow | Theo Dõi (Cá Nhân Xịn) </td>
+              <td> ... (VNĐ) </td>
+              <td> 1000 (Follow/Theo Dõi) </td>
+            </tr>
+            <tr>
+              <td> Follow | Theo Dõi (Cá Nhân fake) </td>
+              <td> ... (VNĐ) </td>
+              <td> 1000 (Follow/Theo Dõi) </td>
+            </tr>
+            <tr>
+              <td> LIKE PAGE (Fanpage) </td>
+              <td> ... (VNĐ) </td>
+              <td> 1000 (like/follow) </td>
+            </tr>
+            <tr>
+              <td> MẮT LIVE</td>
+              <td> ... (VNĐ) </td>
+              <td> 100 mắt ( trong 60 phút live )</td>
+            </tr>
+            <tr>
+              <td> VIP FB (cá nhân)</td>
+              <td> ... (VNĐ) </td>
+              <td> 100 like (7 bài / 1 ngày / 1 tháng )</td>
+            </tr>
+          </table>
+          <p></p>
+      <a href="https://m.me/100004989570567" class="lienket" width="100" height="50">THUÊ NGAY</a>
+          <h3 style="color:red;">Vui Lòng Đợi!</h3>
+      </div>
+      <div id="ins" class="white-popup mfp-hide">
+        <h2>BẢNG GIÁ INSTAGRAM</h2>
+        <table>
+          <tr>
+            <th> LOẠI </th>
+            <th> GIÁ </th>
+            <th> Ghi Chú </th>
+          </tr>
+          <tr>
+            <td> TYM BÀI VIẾT </td>
+            <td> ... (VNĐ) </td>
+            <td> 1000 (TYM)</td>
+          </tr>
+          <tr>
+            <td> Follow | Theo Dõi (Cá Nhân Xịn) </td>
+            <td> ... (VNĐ) </td>
+            <td> 1000 (Follow/Theo Dõi) </td>
+          </tr>
+        </table>
+        <p></p>
+      <a href="https://m.me/100004989570567" class="lienket" width="100" height="50">THUÊ NGAY</a>
+        <h3 style="color:red;">Vui Lòng Đợi!</h3>
+      </div>
+      <div id="tiktok" class="white-popup mfp-hide">
+        <h2>TIKTOK</h2>
+        <p>ĐANG UPDATE...</p>
+      <a href="tiktok.com/@ndt.frv" class="lienket" width="100" height="50">THUÊ NGAY</a>
+
+        <img src="./img/loading.gif" width="50" height="50" alt="kem">
+        <h3 style="color:red;">Vui Lòng Đợi!</h3>
+      </div>
+      <div id="botmes" class="white-popup mfp-hide">
+        <h2>BOT MESSENGER</h2>
+        <style type="text/css">
+          table,
+          th,
+          td {
+            border: 2px solid black;
+          }
+
+          table {
+            border-collapse: collapse;
+          }
+        </style>
+        </head>
+
+        <body>
+          <table>
+            <tr>
+              <th> Tháng </th>
+              <th> GIÁ </th>
+            </tr>
+            <tr>
+              <td> 1 </td>
+              <td> 20.000 </td>
+            </tr>
+            <tr>
+              <td> 3 </td>
+              <td> 50.000 </td>
+            </tr>
+          </table>
+          <p></p>
+      <a href="facebook.com/100004989570567" class="lienket" width="100" height="50">THUÊ NGAY</a>
+          <h3 style="color:pink;">CẢM ƠN BẠN ĐÃ SỬ DỤNG DỊCH VỤ !</h3>
+      </div>
+      <div id="anh" class="white-popup mfp-hide">
+      </div>
+    </div>
+  </div>
+</div>
+<div class="card-buttons">
+  <button id="about" data-section="#about" class="is-active">GIỚI THIỆU</button>
+  <button id="payment" data-section="#payment">THANH TOÁN</button>
+  <button id="contact" data-section="#contact">LIÊN HỆ</button>
+</div>
+</div>
+</div>
+
+<!--script cac kieu-->
+<script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+<script src='https://cdn.jsdelivr.net/jquery.magnific-popup/1.0.0/jquery.magnific-popup.min.js'></script>
+<script src="./index.js"></script>
+</body>
+
+	</html>
